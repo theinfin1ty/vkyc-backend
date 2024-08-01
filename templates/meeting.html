@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vKyc - Appointment</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f6f7fb;
+            display: block;
+            width: 650px;
+            padding: 0 12px;
+            margin: 30px auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        span {
+            font-size: 14px;
+        }
+
+        p,
+        li {
+            font-size: 13px;
+            line-height: 1.7;
+            letter-spacing: 0.7px;
+            margin-top: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .logo-sec {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 650px;
+        }
+
+        .button {
+            padding: 10px;
+            background-color: #7366ff;
+            color: #fff;
+            display: inline-block;
+            border-radius: 30px;
+            margin-bottom: 18px;
+            font-weight: 600;
+            padding: 0.6rem 1.75rem;
+            margin-top: 16px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            body {
+                width: auto;
+                margin: 20px auto;
+            }
+
+            .logo-sec {
+                width: 500px !important;
+            }
+        }
+
+        @media only screen and (max-width: 575px) {
+            .logo-sec {
+                width: 400px !important;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .logo-sec {
+                width: 300px !important;
+            }
+        }
+
+        @media only screen and (max-width: 360px) {
+            .logo-sec {
+                width: 250px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table style="width: 100%;">
+        <tr>
+            <td>
+                <table style="background-color: #f6f7fb; width: 100%;">
+                    <tr>
+                        <td>
+                            <table style="margin: 0 auto; margin-bottom: 30px;">
+                                <tr class="logo-sec">
+                                    <td><img width="auto" height="60px" src="{{.CompanyLogo}}" alt="Logo">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="margin: 0 auto; background-color: #fff; border-radius: 8px;">
+                                <tr>
+                                    <td style="padding: 30px;">
+                                        <p><b>Dear {{.FirstName}},</b></p>
+                                        <p>We are pleased to confirm your upcoming video KYC (vKYC) appointment with
+                                            Accura Scan. Your identity verification is a crucial step towards a secure
+                                            and trusted relationship with us.</p>
+                                        <p><b>Appointment Details:</b></p>
+                                        <ul>
+                                            <li><b>Date & Time: </b>{{.ScheduleDateTime}}</li>
+                                            <li><b>Joining link: </b><a href="{{.Link}}">{{.Link}}</a></li>
+                                            <li><b>Meeting Code: </b>{{.MeetingCode}}</li>
+                                            <li><b>Password: </b>{{.Password}}</li>
+                                            <li><b>KYC Officer: </b>{{.AgentName}}</li>
+                                        </ul>
+                                        <p>Please ensure you have the following before the appointment:</p>
+                                        <ul>
+                                            <li>A stable internet connection.</li>
+                                            <li>A government-issued ID document (e.g., passport, driver’s license,
+                                                National ID card).</li>
+                                            <li>A device with a working camera and microphone.</li>
+                                        </ul>
+                                        <p><b>To join the vKYC call:</b></p>
+                                        <ol>
+                                            <li>Click on the joining link.</li>
+                                            <li>Enter the meeting code and password.</li>
+                                            <li>Our KYC Officer will guide you through from there onwards.</li>
+                                        </ol>
+                                        <table style="display: flex; justify-content: center; align-items: center">
+                                            <td class="text-center"><a href="{{.Link}}" class="button">Join Meeting</a>
+                                            </td>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

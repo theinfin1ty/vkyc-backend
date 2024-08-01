@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vKyc - Appointment</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f6f7fb;
+            display: block;
+            width: 650px;
+            padding: 0 12px;
+            margin: 30px auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        span {
+            font-size: 14px;
+        }
+
+        p,
+        li {
+            font-size: 13px;
+            line-height: 1.7;
+            letter-spacing: 0.7px;
+            margin-top: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .logo-sec {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 650px;
+        }
+
+        .button {
+            padding: 10px;
+            background-color: #7366ff;
+            color: #fff;
+            display: inline-block;
+            border-radius: 30px;
+            margin-bottom: 18px;
+            font-weight: 600;
+            padding: 0.6rem 1.75rem;
+            margin-top: 16px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            body {
+                width: auto;
+                margin: 20px auto;
+            }
+
+            .logo-sec {
+                width: 500px !important;
+            }
+        }
+
+        @media only screen and (max-width: 575px) {
+            .logo-sec {
+                width: 400px !important;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .logo-sec {
+                width: 300px !important;
+            }
+        }
+
+        @media only screen and (max-width: 360px) {
+            .logo-sec {
+                width: 250px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table style="width: 100%;">
+        <tr>
+            <td>
+                <table style="background-color: #f6f7fb; width: 100%;">
+                    <tr>
+                        <td>
+                            <table style="margin: 0 auto; margin-bottom: 30px;">
+                                <tr class="logo-sec">
+                                    <td><img width="auto" height="60px" src="{{.CompanyLogo}}" alt="Logo">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="margin: 0 auto; background-color: #fff; border-radius: 8px;">
+                                <tr>
+                                    <td style="padding: 30px;">
+                                        <p><b>Dear {{.FirstName}},</b></p>
+                                        <p>We are excited to welcome you to the {{.Company}} vKYC team. As an agent, you
+                                            play a vital role in our customer verification process, ensuring a smooth
+                                            and secure experience for our clients.</p>
+                                        <p><b>Your Access Credentials:</b></p>
+                                        <ul>
+                                            <li><b>Portal Link: </b> <a href="{{.Link}}">{{.Link}}</a></li>
+                                            <li><b>Username: </b> {{.Email}}</li>
+                                            <li><b>Temporary Password: </b> {{.Password}}
+                                                <i>(Please change upon first login)</i>
+                                            </li>
+                                        </ul>
+                                        <p><b>Getting Started:</b></p>
+                                        <ol>
+                                            <li>Visit the provided vKYC Portal URL.</li>
+                                            <li>Enter your username and the temporary password.</li>
+                                            <li>You will be prompted to set a new, secure password.</li>
+                                            <li>Once logged in, you can begin scheduling vKYC calls with customers.</li>
+                                        </ol>
+                                        <p><b>Your Responsibilities:</b></p>
+                                        <ul>
+                                            <li>Schedule and conduct vKYC calls.</li>
+                                            <li>Verify customer identities and documents.</li>
+                                            <li>Maintain confidentiality and compliance with regulatory standards.</li>
+                                        </ul>
+                                        <p> We have attached a detailed guide on how to use the vKYC portal and best
+                                            practices for conducting KYC calls. Please review it thoroughly before your
+                                            first appointment.</p>
+                                        <table style="display: flex; justify-content: center; align-items: center">
+                                            <td class="text-center"><a href="{{.Link}}" class="button">Go To
+                                                    Dashboard</a>
+                                            </td>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
